@@ -61,7 +61,7 @@ section.module h2 {
 
 /* Os textos das sessões */
 section.module.content {
-    padding: 40px 0;
+    padding: 40px 40px;
     background-color: #ece7d5;
 }
 
@@ -128,6 +128,7 @@ section.module.parallax-3 {
 }
 
 
+/* Responsividade via CSS */
 @media screen and (max-width: 750px) {
 
     /* Título das imagens */
