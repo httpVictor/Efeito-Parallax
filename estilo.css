@@ -1,0 +1,138 @@
+/* Configurações Gerais */
+body {
+    /*** DEFINE AS MARGENS EXTERNA E INTERNA COMO 0 ***/
+    margin: 0px;
+    padding: 0px;
+    /*** DEFININDO TEXTO DA PÁGINA ***/
+    color: #242424;
+    font-family: sans-serif;
+    /*** ADAPTAÇÃO DO TEXTO NA TELA***/
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Configurações de títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Classe que envolve todo o código*/
+.envolver {
+    width: 100%;
+    margin: 0 auto;
+    /*0 em cima e em baixo, automática dos lados*/
+}
+
+/* Definindo o main inteiro como blocos */
+main {
+    display: block;
+    background-color: #fff;
+}
+
+/* Define uma largura máxima para a página e centraliza os elementos */
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+section.module p {
+    margin-bottom: 75px;
+}
+
+/* TODOS menos o último */
+section.module:last-child {
+    margin-bottom: 0px;
+}
+
+/* Modificando os títtulos dos módulos */
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+/* Os textos das sessões */
+section.module.content {
+    padding: 40px 0;
+    background-color: #ece7d5;
+}
+
+/* Fazendo o parallax */
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    /*!important define como prioridade*/
+    position: relative;
+    overflow: hidden;
+
+    /* Propriedades do background */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Criou o efeito paralax, pois fixou em um ponto específico*/
+    background-attachment: fixed;
+
+
+    /* GARANTINDO QUE FUNCIONE EM OUTROS NAVEGADORES */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* SOMBRA NAS IMAGENS */
+section.module.parallax:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+
+    /* FAZENDO PARA OUTROS NAVEGADORES */
+    background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+/* Título das imagens */
+section.module.parallax h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 80px;
+    z-index: 50;
+    text-transform: uppercase;
+
+}
+
+/* IMAGENS */
+section.module.parallax-1 {
+    background-image: url(./imgs/el-que-espera.png);
+}
+
+section.module.parallax-2 {
+    background-image: url(./imgs/anitta-museu.png);
+}
+
+section.module.parallax-3 {
+    background-image: url(./imgs/versions-of-me-photoshoot-1.png.webp);
+}
+
+
+@media screen and (max-width: 750px) {
+
+    /* Título das imagens */
+    section.module.parallax h1 {
+        font-size: 40px;
+    }
+
+}
